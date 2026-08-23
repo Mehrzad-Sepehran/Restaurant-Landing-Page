@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html class="scroll-smooth" dir="">
   <head>
     <meta charset="UTF-8" />
     <link href="./src/css/styles.css" rel="stylesheet" />
@@ -33,17 +33,17 @@
             class="hidden md:flex justify-between items-center gap-10 transition-all duration-200 text-sm"
           >
             <li
-              class="text-foreground  hover:text-accent transition-all duration-200"
+              class="text-foreground hover:text-accent transition-all duration-200"
             >
               <a href="#Menu">Menu</a>
             </li>
             <li
-              class="text-foreground  hover:text-accent transition-all duration-200"
+              class="text-foreground hover:text-accent transition-all duration-200"
             >
               <a href="#Story">Story</a>
             </li>
             <li
-              class="text-foreground  hover:text-accent transition-all duration-200"
+              class="text-foreground hover:text-accent transition-all duration-200"
             >
               <a href="#Gallery">Gallery</a>
             </li>
@@ -56,7 +56,10 @@
             </li>
           </ul>
 
-          <button id="small-menu-toggle-btn" class="md:hidden cursor-pointer hover:bg-black/10 rounded-full p-1 transition-all duration-200">
+          <button
+            id="small-menu-toggle-btn"
+            class="md:hidden cursor-pointer hover:bg-black/10 rounded-full p-1 transition-all duration-200"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -95,14 +98,21 @@
           </button>
         </div>
 
-        <div id="small-menu"
+        <div
+          id="small-menu"
           class="hidden md:hidden bg-background border-b border-border px-6 pb-6 flex flex-col gap-4"
         >
-          <a href="#Menu" class="text-base py-1 border-b border-border/40 hover:bg-secondary"
+          <a
+            href="#Menu"
+            class="text-base py-1 border-b border-border/40 hover:bg-secondary"
             >Menu</a
-          ><a href="#Story" class="text-base py-1 border-b border-border/40 hover:bg-secondary"
+          ><a
+            href="#Story"
+            class="text-base py-1 border-b border-border/40 hover:bg-secondary"
             >Story</a
-          ><a href="#Gallery" class="text-base py-1 border-b border-border/40 hover:bg-secondary"
+          ><a
+            href="#Gallery"
+            class="text-base py-1 border-b border-border/40 hover:bg-secondary"
             >Gallery</a
           ><a
             href="#BookaTable"
@@ -266,22 +276,26 @@
             </div>
           </div>
           <div class="flex flex-row gap-2 items-center">
-            <button id="all-btn"
+            <button
+              id="all-btn"
               class="dish-btn border border-border py-2 px-4 text-xs tracking-wide cursor-pointer hover:border-foreground/40 transition-all duration-200 bg-primary text-background"
             >
               All
             </button>
-            <button id="starters-btn"
+            <button
+              id="starters-btn"
               class="dish-btn border border-border py-2 px-4 text-xs text-foreground tracking-wide cursor-pointer hover:border-foreground/40 transition-all duration-200"
             >
               Starters
             </button>
-            <button id="mains-btn"
+            <button
+              id="mains-btn"
               class="dish-btn border border-border py-2 px-4 text-xs text-foreground tracking-wide cursor-pointer hover:border-foreground/40 transition-all duration-200"
             >
               Mains
             </button>
-            <button id="deserts-btn"
+            <button
+              id="deserts-btn"
               class="dish-btn border border-border py-2 px-4 text-xs text-foreground tracking-wide cursor-pointer hover:border-foreground/40 transition-all duration-200"
             >
               Deserts
@@ -415,7 +429,28 @@
           </div>
         </div>
 
-        <div></div>
+        <div class="mt-10 text-center">
+          <a href="https://renderer.mhmcdn.com/design/thumbnail/87300d9b-ef42-4481-b27a-5fac9091af98?width=500&update=1786752000102" target="_blank" class="inline-flex items-center gap-2 text-sm tracking-wide text-accent hover:gap-4 transition-all duration-200 border-b border-accent pb-0.5">
+            <span>Download full menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-right"
+            data-fg-d3bl126=":0:node_modules/lucide-react:334:15:13881:24:e:ArrowRight::::::s5N"
+            data-fgid-d3bl126=":r3d:"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+          </a>
+        </div>
       </div>
     </section>
     <!-- Menu End -->
@@ -556,12 +591,12 @@
             <div>
               <label
                 class="text-[10px] tracking-[0.2em] uppercase opacity-60 block mb-2 font-DMmono"
-                for="FirstName"
+                for="first-name-input"
                 >First Name</label
               >
               <input
-                id="FirstName"
-                class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors"
+                id="first-name-input"
+                class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors required-input"
                 type="text"
                 placeholder="Mehrzad"
               />
@@ -569,12 +604,12 @@
             <div>
               <label
                 class="text-[10px] tracking-[0.2em] uppercase opacity-60 block mb-2 font-DMmono"
-                for="LastName"
+                for="last-name-input"
                 >Last Name</label
               >
               <input
-                id="LastName"
-                class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors"
+                id="last-name-input"
+                class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors required-input"
                 type="text"
                 placeholder="Sepehran"
               />
@@ -583,12 +618,12 @@
           <div class="w-full">
             <label
               class="text-[10px] tracking-[0.2em] uppercase opacity-60 block mb-2 font-DMmono"
-              for="Email"
+              for="email-input"
               >EMail</label
             >
             <input
-              id="Email"
-              class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors"
+              id="email-input"
+              class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors required-input"
               type="text"
               placeholder="sepehranmehrzad@example.com"
             />
@@ -597,12 +632,12 @@
             <div>
               <label
                 class="text-[10px] tracking-[0.2em] uppercase opacity-60 block mb-2 font-DMmono"
-                for="Date"
+                for="date-input"
                 >Date</label
               >
               <input
-                id="Date"
-                class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors scheme-dark"
+                id="date-input"
+                class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors scheme-dark cursor-pointer required-input"
                 type="date"
                 placeholder="Mehrzad"
               />
@@ -610,15 +645,17 @@
             <div>
               <label
                 class="text-[10px] tracking-[0.2em] uppercase opacity-60 block mb-2 font-DMmono"
-                for="Guests"
+                for="guests-input"
                 >Guests</label
               >
               <select
-                id="Guests"
-                class="w-full bg-background/10 border border-background/20 text-background px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors appearance-none"
-                name=""
-                id=""
+                id="guests-input"
+                class="w-full bg-background/10 border border-background/20 text-background px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
+
               >
+                <option value="0" class="bg-primary text-background">
+                  No Guest
+                </option>
                 <option value="1" class="bg-primary text-background">
                   1 Guest
                 </option>
@@ -649,17 +686,17 @@
           <div class="w-full">
             <label
               class="text-[10px] tracking-[0.2em] uppercase opacity-60 block mb-2 font-DMmono"
-              for="SpecialRequests"
+              for="special-requests-input"
               >Special Requests</label
             >
             <textarea
-              id="SpecialRequests"
+              id="special-requests-input"
               rows="3"
               placeholder="Dietary requirements, occasion, preferred seating…"
               class="w-full bg-background/10 border border-background/20 text-background placeholder-background/30 px-4 py-3 text-sm focus:outline-none focus:border-accent transition-colors resize-none"
             ></textarea>
           </div>
-          <button
+          <button id="reservstion-btn"
             type="submit"
             class="w-full py-4 bg-accent text-background text-sm tracking-widest uppercase hover:opacity-85 transition-all duration-200 cursor-pointer"
           >
@@ -720,5 +757,6 @@
 
     <script src="./src/js/navbar-menu-toggle.js"></script>
     <script src="./src/js/menu-section-dishes.js"></script>
+    <script src="./src/js/book-a-table.js"></script>
   </body>
 </html>
