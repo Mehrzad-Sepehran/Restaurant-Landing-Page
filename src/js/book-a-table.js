@@ -34,6 +34,10 @@ const showToast = (message) => {
   toastText.innerHTML = message;
   toastContainer.classList.add("top-20");
   toastContainer.classList.remove("opacity-0");
+
+  setTimeout(() => {
+    hideToast();
+  }, 8000);
 };
 
 const hideToast = () => {
