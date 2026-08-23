@@ -15,10 +15,13 @@ const checkInputs = () => {
 
   requiredInputs.forEach((input) => {
     if (!input.value) {
-      input.classList.add("border-red-600/80");
+      input.classList.remove("border-background/20");
+      input.classList.add("border-red-600/80", "border-dashed");
+
       unfilledInputsCount++;
     } else {
-      input.classList.remove("border-red-600/80");
+      input.classList.remove("border-red-600/80", "border-dashed");
+      input.classList.add("border-background/20");
     }
   });
 
@@ -28,26 +31,43 @@ const checkInputs = () => {
 };
 
 const showToast = (message) => {
-  toastText.innerHTML = message
+  toastText.innerHTML = message;
   toastContainer.classList.add("top-20");
   toastContainer.classList.remove("opacity-0");
-}
+};
 
 const hideToast = () => {
   toastContainer.classList.remove("top-20");
   toastContainer.classList.add("opacity-0");
-}
+};
 
 reservstionBtn.addEventListener("click", (event) => {
   event.preventDefault();
   const areIputsFlled = checkInputs();
 
-
   if (areIputsFlled) {
+    showToast(
+      "Your reservation request has been received. We will confirm by email within 24 hours.",
+    );
   } else {
+    showToast("Please fill the required fields!");
   }
 });
 
 toastCloseBtn.addEventListener("click", () => {
-  hideToast()
-})
+  hideToast();
+});
+
+window.addEventListener("load", () => {
+  requiredInputs.forEach((input) => {
+    input.addEventListener("change", (event) => {
+      if (event.target.value.length) {
+        input.classList.remove("border-red-600/80", "border-dashed");
+        input.classList.add("border-background/20");
+      } else {
+        input.classList.remove("border-background/20");
+        input.classList.add("border-red-600/80", "border-dashed");
+      }
+    });
+  });
+});
