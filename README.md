@@ -17,8 +17,6 @@ This project focuses on creating a clean, attractive, and responsive restaurant 
 ### Desktop
 
 ![Restaurant Landing Page](./src/images/preview1.png)
-![Restaurant Landing Page](./src/images/preview2.png)
-![Restaurant Landing Page](./src/images/preview3.png)
 
 ### Phone
 
