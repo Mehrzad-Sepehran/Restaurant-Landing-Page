@@ -16,9 +16,11 @@ This project focuses on creating a clean, attractive, and responsive restaurant 
 
 ### Desktop
 
-![Restaurant Landing Page](./preview.png)
+![Restaurant Landing Page](./src/images/preview1.png)
+![Restaurant Landing Page](./src/images/preview2.png)
+![Restaurant Landing Page](./src/images/preview3.png)
 
-> Add a screenshot of the project to the repository and name it `preview.png`.
+### Phone
 
 ---
 
