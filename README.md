@@ -20,6 +20,8 @@ This project focuses on creating a clean, attractive, and responsive restaurant 
 
 ### Phone
 
+![Restaurant Landing Page](./src/images/preview2.png)
+
 ---
 
 ## 🛠️ Technologies
