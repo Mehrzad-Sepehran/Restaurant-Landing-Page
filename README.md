@@ -20,7 +20,7 @@ This project focuses on creating a clean, attractive, and responsive restaurant 
 
 ### Phone
 
-![Restaurant Landing Page](./src/images/preview2.png)
+<img src="./src/images/preview2.png" width="350px" height="700px">
 
 ---
 
