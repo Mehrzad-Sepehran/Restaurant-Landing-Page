@@ -30,6 +30,14 @@ const checkInputs = () => {
   } else return true;
 };
 
+const checkEmailAdress = () => {
+  const emailRegEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+  if (emailRegEx.test(emailInput.value)) {
+    return true;
+  } else return false;
+};
+
 const showToast = (message) => {
   toastText.innerHTML = message;
   toastContainer.classList.add("top-20");
@@ -47,15 +55,18 @@ const hideToast = () => {
 
 reservstionBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  const areIputsFlled = checkInputs();
+  const areInputsFilled = checkInputs();
+  const isEmailValid = checkEmailAdress();
 
-  if (areIputsFlled) {
+  if (areInputsFilled && isEmailValid) {
     showToast(
       "Your reservation request has been received. We will confirm by email within 24 hours.",
     );
   } else {
-    showToast("Please fill the required fields!");
+    showToast("Please fill the required fields correctly!");
   }
+
+
 });
 
 toastCloseBtn.addEventListener("click", () => {
